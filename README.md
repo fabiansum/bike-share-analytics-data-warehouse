@@ -16,14 +16,14 @@ Divvy is a bike sharing program in Chicago, Illinois USA that allows riders to p
     - Based on the number of rides the rider averages per month
     - Based on the number of minutes the rider spends on a bike per month
 
-### Programming Language and Technologies
+### Programming Languages and Technologies
 - Python
 - PostgreSQL
 - Azure Blob Storage (Azure Data Lake Storage Gen2)
 - Azure Synapse Analytics
 - Azure Synapse Serverless SQL Pool
 
-## Directory Structre
+## Directory Structure
 This section outlines the directory structure of the data within the Azure Data Lake Storage Gen2. The data is divided into two layers: raw,and gold (curated business-level tables). 
 ```
 bike_share_data/
