@@ -61,22 +61,22 @@ As there is no access to a Dedicated SQL pool &mdash; the calendar table is crea
 
 ## Load Step: Create Staging Tables using CREATE EXTERNAL TABLE
 Scripts 4 to 7 inside the `sql_scripts` folder are used to populate the staging tables with data from CSV files. Once the data is loaded with correct column data type, you can proceed to the transform step to transform the data into a format that is suitable for analysis.
-- [Staging Payment Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/4_create_external_table_staging_payment.sql)
-- [Staging Rider Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/5_create_external_table_staging_rider.sql)
-- [Staging Station Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/6_create_external_table_staging_station.sql)
-- [Staging Trip Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/7_create_external_table_staging_trip.sql)
+- [Staging Payment Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/4_create_external_table_staging_payment.sql)
+- [Staging Rider Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/5_create_external_table_staging_rider.sql)
+- [Staging Station Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/6_create_external_table_staging_station.sql)
+- [Staging Trip Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/7_create_external_table_staging_trip.sql)
 
 
 ## Transform Step: Create Fact and Dimension Tables using CETAS
 Scripts 10 to 15 in the `sql_scripts` folder are used to create fact and dimension tables using CETAS. These tables are created based on the business requirements listed in the project overview, using the staging table as a source.
 - [Fact Payment Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/10_create_fact_payment.sql)
-- [Dimension Rider Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/11_create_dim_rider.sql)
-- [Dimension Station Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/12_create_dim_station.sql)
-- [Fact Trip Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/13_create_fact_trip.sql)
-- [Dim Calendar Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/14_create_dim_calendar.sql)
+- [Dimension Rider Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/11_create_dim_rider.sql)
+- [Dimension Station Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/12_create_dim_station.sql)
+- [Fact Trip Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/13_create_fact_trip.sql)
+- [Dim Calendar Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/14_create_dim_calendar.sql)
 
 ## Analysis Step
 Script 15 is used to address the business requirements outlined in the project overview.
-- [Analysis](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/15_analysis.sql)
+- [Analysis](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/sql_scripts/15_analysis.sql)
 
 
