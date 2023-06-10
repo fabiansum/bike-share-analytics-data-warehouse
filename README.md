@@ -39,9 +39,11 @@ bike_share_data/
             fact_calendar
             fact_payment
 ```
-
+## Solution Architecture
+![Solution Architecture](images/solution-architecture.png)
 
 ## STAR Schema Design
+The STAR schema consists of two fact tables (Fact Trip and Fact Payment) and three dimension tables (Dim Calendar, Dim Rider, Dim Station). 
 ![Star Schema](images/star_schema_fabian.png)
 
 
@@ -66,13 +68,15 @@ Scripts 4 to 7 inside the `sql_scripts` folder are used to populate the staging 
 
 
 ## Transform Step: Create Fact and Dimension Tables using CETAS
-Scripts 10 to 14 in the `sql_scripts` folder are used to create fact and dimension tables using CETAS. These tables are created based on the business requirements listed in the project overview, using the staging table as a source.
+Scripts 10 to 15 in the `sql_scripts` folder are used to create fact and dimension tables using CETAS. These tables are created based on the business requirements listed in the project overview, using the staging table as a source.
 - [Fact Payment Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/10_create_fact_payment.sql)
 - [Dimension Rider Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/11_create_dim_rider.sql)
 - [Dimension Station Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/12_create_dim_station.sql)
 - [Fact Trip Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/13_create_fact_trip.sql)
+- [Dim Calendar Table](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/14_create_dim_calendar.sql)
 
-
-
+## Analysis Step
+Script 15 is used to address the business requirements outlined in the project overview.
+- [Analysis](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/sql_scripts/15_analysis.sql)
 
 

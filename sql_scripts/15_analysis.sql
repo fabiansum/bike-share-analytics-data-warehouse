@@ -3,6 +3,7 @@ GO
 
 -- how much time is spent per ride --
 -- 1. date and time factors such as day of week and time of day
+-- a. day of week and time of day
 SELECT
     AVG(ft.duration) AS avg_duration,
     dc.day_of_week,
@@ -15,6 +16,36 @@ FROM
     JOIN gold.dim_rider dr ON ft.rider_id = dr.rider_id
 GROUP BY
     dc.day_of_week,
+    ft.trip_time
+ORDER BY
+    avg_duration DESC;
+
+--- b day of week only
+SELECT
+    AVG(ft.duration) AS avg_duration,
+    dc.day_of_week
+FROM
+    gold.fact_trip ft
+    JOIN gold.dim_calendar dc ON ft.trip_date = dc.date_id
+    JOIN gold.dim_station start_ds ON ft.start_station_id = start_ds.station_id
+    JOIN gold.dim_station end_ds ON ft.end_station_id = end_ds.station_id
+    JOIN gold.dim_rider dr ON ft.rider_id = dr.rider_id
+GROUP BY
+    dc.day_of_week
+ORDER BY
+    avg_duration DESC;
+
+---- c. time of day only
+SELECT
+    AVG(ft.duration) AS avg_duration,
+    ft.trip_time AS time_of_day
+FROM
+    gold.fact_trip ft
+    JOIN gold.dim_calendar dc ON ft.trip_date = dc.date_id
+    JOIN gold.dim_station start_ds ON ft.start_station_id = start_ds.station_id
+    JOIN gold.dim_station end_ds ON ft.end_station_id = end_ds.station_id
+    JOIN gold.dim_rider dr ON ft.rider_id = dr.rider_id
+GROUP BY
     ft.trip_time
 ORDER BY
     avg_duration DESC;
