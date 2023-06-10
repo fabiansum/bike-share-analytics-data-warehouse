@@ -8,9 +8,9 @@ IF OBJECT_ID('dbo.staging_rider') IS NOT NULL
 CREATE EXTERNAL TABLE dbo.staging_rider (
 	rider_id int,
 	first varchar(50),
-	last nvarchar(50),
-	address nvarchar(100),
-	birthday datetime2(0),
+	last varchar(50),
+	address varchar(100),
+	birthday varchar(50),
 	account_start_date datetime2(0),
 	account_end_date datetime2(0),
 	is_member bit

@@ -7,7 +7,7 @@ IF OBJECT_ID('dbo.staging_payment') IS NOT NULL
 
 CREATE EXTERNAL TABLE dbo.staging_payment (
 	payment_id int,
-	date datetime2(0),
+	date varchar(50),
 	amount float,
 	rider_id int
 	)

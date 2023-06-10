@@ -17,9 +17,9 @@ SELECT
     first AS first_name,
     last AS last_name,
     address,
-    birthday,
-    account_start_date,
-    account_end_date,
+    LEFT(birthday, 10) AS birthday,
+    LEFT(account_start_date, 10) AS account_start_date,
+    LEFT(account_end_date, 10) AS account_end_date,
     is_member
 FROM dbo.staging_rider
 GO

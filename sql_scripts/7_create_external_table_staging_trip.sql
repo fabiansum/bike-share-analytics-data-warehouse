@@ -8,8 +8,8 @@ IF OBJECT_ID('dbo.staging_trip') IS NOT NULL
 CREATE EXTERNAL TABLE dbo.staging_trip (
 	trip_id varchar(50),
 	rideable_type varchar(50),
-	start_at datetime2(0),
-	ended_at datetime2(0),
+	start_at varchar(50),
+	ended_at varchar(50),
 	start_station_id varchar(50),
 	end_station_id varchar(50),
 	rider_id int

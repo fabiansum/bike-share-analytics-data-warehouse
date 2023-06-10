@@ -6,7 +6,7 @@ IF OBJECT_ID('dbo.staging_calendar') IS NOT NULL
     DROP EXTERNAL TABLE dbo.staging_calendar;
 
 CREATE EXTERNAL TABLE dbo.staging_calendar (
-	[date] datetime2(0),
+	[date] varchar(50),
 	[day_of_week] int,
 	[day_of_month] int,
 	[day_of_year] int,

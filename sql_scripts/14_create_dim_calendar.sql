@@ -12,7 +12,7 @@ WITH (
 )
 AS 
 SELECT 
-	[date],
+	LEFT([date], 10) AS date_id,
 	[day_of_week],
 	[day_of_month],
 	[day_of_year] ,

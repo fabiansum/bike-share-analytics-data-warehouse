@@ -13,13 +13,12 @@ WITH (
     FILE_FORMAT = csv_file_format
 )
 AS 
-SELECT 
+SELECT TOP 100
     trip_id,
     rideable_type,
-    CONVERT(DATE, start_at) AS trip_date,
-    TIME(DATETRUNC(HOUR, start_at)) AS trip_time,
-    start_at AS start_time,
-    ended_at AS end_time,
+    LEFT(start_at, 10) AS trip_date,
+    LEFT(start_at, 19) AS start_time,
+    LEFT(ended_at, 19) AS end_time,
     DATEDIFF(MINUTE, start_at, ended_at) AS duration,
     start_station_id,
     end_station_id,

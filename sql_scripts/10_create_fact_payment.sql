@@ -13,7 +13,7 @@ WITH (
     FILE_FORMAT = csv_file_format
 )
 AS 
-SELECT payment_id, date, amount
+SELECT payment_id, LEFT(date, 10) as date, amount, rider_id
 FROM dbo.staging_payment
 GO
 
