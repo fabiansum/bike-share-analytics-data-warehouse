@@ -45,6 +45,7 @@ bike_share_data/
 ## STAR Schema Design
 The STAR schema consists of two fact tables (Fact Trip and Fact Payment) and three dimension tables (Dim Calendar, Dim Rider, Dim Station). 
 ![Star Schema](images/star_schema_fabian.png)
+[Star Schema &mdash; PDF](https://github.com/fabiansum/bike-share-analytics-data-warehouse/blob/main/pdf/star_schema_fabian.pdf)
 
 
 ## Extract Step: Create the data in PostgreSQL
