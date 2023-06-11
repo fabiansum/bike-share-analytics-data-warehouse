@@ -16,7 +16,7 @@ Divvy is a bike sharing program in Chicago, Illinois USA that allows riders to p
     - Based on the number of rides the rider averages per month
     - Based on the number of minutes the rider spends on a bike per month
 
-### Programming Languages and Technologies
+### Technology Stack
 - Python
 - PostgreSQL
 - Azure Blob Storage (Azure Data Lake Storage Gen2)
