@@ -24,7 +24,7 @@ Divvy is a bike sharing program in Chicago, Illinois USA that allows riders to p
 - Azure Synapse Serverless SQL Pool
 
 ## Directory Structure
-This section outlines the directory structure of the data within the Azure Data Lake Storage Gen2. The data is divided into two layers: raw,and gold (curated business-level tables). 
+This section outlines the directory structure of the data within the Azure Data Lake Storage Gen2. The data is divided into two layers: raw and gold (curated business-level tables). 
 ```
 bike_share_data/
         raw/
@@ -36,7 +36,7 @@ bike_share_data/
             dim_calendar
             dim_rider
             dim_station
-            fact_calendar
+            fact_trip
             fact_payment
 ```
 ## Solution Architecture
